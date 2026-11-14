@@ -1,0 +1,10 @@
+# Review-only Cloudflare Worker deployment configuration.
+# This file lives inside demo-protection/ to avoid affecting the marketing site.
+name = "gatc-demo-access-test"
+main = "demo-gateway-bundled-worker.js"
+compatibility_date = "2026-11-10"
+workers_dev = true
+
+# The existing Cloudflare KV binding must remain attached to this Worker.
+# Update the KV namespace ID before running Wrangler CLI from a new environment.
+# Cloudflare dashboard-managed bindings may already exist on the test Worker.
